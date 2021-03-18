@@ -1,0 +1,132 @@
+:root {
+    /*Primary*/
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /*Neutral*/
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--Grayish-Blue);
+    padding: 4rem 2rem;
+    margin: 0;
+}
+
+.contenedor-principal {
+    margin: 0 auto;
+}
+
+.header{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header h2{
+    margin: 0;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+.header .titulo{
+    font-weight: 700;
+    color: var(--Very-Dark-Blue);
+}
+
+.titulo{
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+}
+
+.texto{
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.card{
+    margin: 0 auto;
+    max-width: 310px;
+    background-color: #fafafa;
+    box-shadow: 0 10px 30px #83a6d288;
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.contenedor-imagen{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagen::after{
+    text-align: right;
+}
+
+.card:nth-child(1){
+    border-top: 4px solid var(--Blue);
+}
+
+.contenedor-medio .card:nth-child(1){
+    border-top: 4px solid var(--Red);
+}
+
+.contenedor-medio .card:nth-child(2){
+    border-top: 4px solid var(--Orange);
+}
+
+.card:nth-child(3){
+    border-top: 4px solid var(--Cyan);
+}
+
+
+@media screen and (min-width:1200px){
+    .card{
+        max-width: 350px;
+        /*flex-basis: calc(33%);*/
+        margin: 0;
+    }
+
+    .contenedor-medio{
+        margin: 0 2rem 0;
+    }
+
+    .contenedor-medio .card:nth-child(1){
+        margin-bottom: 2rem;
+    }
+
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header h2{
+        font-size: 36px;
+    }
+}
